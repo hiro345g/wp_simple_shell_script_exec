@@ -18,6 +18,12 @@ sudo cp -r wp_simple_shell_script_exec/ /var/www/html/wordpress/wp-content/plugi
 echo 'echo "hello"' | sudo tee -a /var/www/html/wordpress/wp-content/plugins/wp_simple_shell_script_exec/script.sh'
 ```
 
+ファイルの所有者を環境に合わせて指定します。例えば Ubuntu なら www-data:www-data にします。
+
+```console
+sudo chown -R www-data:www-data /var/www/html/wordpress/wp-content/plugins/wp_simple_shell_script_exec/
+```
+
 ## 利用方法
 
 WordPress の管理画面で、wp_simple_shell_script_exec を有効にするとダッシュボードに WP SSS Exec のメニューが表示されます。
